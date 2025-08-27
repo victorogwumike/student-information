@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Portal</title>
+</head>
+<body>
+    <h1>Welcome to Student Portal</h1>
+    <form method="get" action="">
+        <input type="text" name="student_id" placeholder="Enter Student ID">
+        <button type="submit">Search</button>
+    </form>
+
+    {% if request.GET.student_id %}
+        <a href="/student/{{ request.GET.student_id }}/">View Student</a>
+    {% endif %}
+</body>
+</html>
